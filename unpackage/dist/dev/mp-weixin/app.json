@@ -4,7 +4,9 @@
     "pages/component/component",
     "pages/api/api",
     "pages/schema/schema",
-    "pages/system/system"
+    "pages/system/system",
+    "pages/login/login",
+    "pages/mine/member-code"
   ],
   "subPackages": [],
   "window": {

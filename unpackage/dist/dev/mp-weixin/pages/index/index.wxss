@@ -29,7 +29,7 @@
 /* 文字基本颜色 */
 /* 行为相关颜色 */
 .container.data-v-57280228 {
-  background-color: #F1F8FA;
+  background-color: #f1f8fa;
 }
 .container .header.data-v-57280228 {
   position: relative;
@@ -70,7 +70,7 @@
 }
 .container .content .take-in-out .item .title.data-v-57280228 {
   font-size: 30rpx;
-  color: #5A5B5C;
+  color: #5a5b5c;
   font-weight: 600;
 }
 .container .content .take-in-out .item.item.data-v-57280228:nth-child(1)::after {
@@ -109,7 +109,7 @@
   width: 340rpx;
   padding: 0 20rpx;
   margin-right: 20rpx;
-  background-color: #E8EACF;
+  background-color: #e8eacf;
 }
 .container .content .activities .left .grid.data-v-57280228:nth-last-child(1) {
   align-items: flex-end;

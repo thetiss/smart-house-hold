@@ -15,6 +15,7 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 __webpack_require__(/*! uni-pages */ 26);
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 27));
 var _index = _interopRequireDefault(__webpack_require__(/*! ./locale/index */ 33));
+var _index2 = _interopRequireDefault(__webpack_require__(/*! ./store/index.js */ 98));
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 25));
 var _vueI18n = _interopRequireDefault(__webpack_require__(/*! vue-i18n */ 38));
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -25,12 +26,47 @@ var i18nConfig = {
   locale: uni.getLocale(),
   messages: _index.default
 };
+var msgError = function msgError() {
+  var msg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '提示信息';
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'fail';
+  uni.showToast({
+    title: msg,
+    type: type,
+    duration: duration
+  });
+};
+var msgSuccess = function msgSuccess() {
+  var msg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '提示信息';
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'success';
+  uni.showToast({
+    title: msg,
+    type: type,
+    duration: duration
+  });
+};
+var showLongMsg = function showLongMsg() {
+  var msg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '提示信息';
+  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'none';
+  uni.showToast({
+    title: msg,
+    type: type,
+    duration: duration
+  });
+};
 _vue.default.use(_vueI18n.default);
 var i18n = new _vueI18n.default(i18nConfig);
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
+_vue.default.prototype.$store = _index2.default;
+_vue.default.prototype.$msgError = msgError;
+_vue.default.prototype.$msgSuccess = msgSuccess;
+_vue.default.prototype.$showLongMsg = showLongMsg;
 var app = new _vue.default(_objectSpread({
-  i18n: i18n
+  i18n: i18n,
+  store: _index2.default
 }, _App.default));
 createApp(app).$mount();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["createApp"]))
