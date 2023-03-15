@@ -23,9 +23,23 @@
 				"navigationBarTitleText": "%index.schema%",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/system/system",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	    ,{
-            "path" : "pages/system/system",
+            "path" : "pages/mine/member-code",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
