@@ -3,7 +3,7 @@
 		<view class="header">
 			<image class="bg" src="https://img-shop.qmimg.cn/s23107/2020/04/26/3eb7808bf105262604.jpg"></image>
 			<view class="intro d-flex flex-column">
-				<view class="font-size-lg text-color-white mb-10">您好，微信用户</view>
+				<view class="font-size-lg text-color-white mb-10">您好，{{ isLogin ? member.nickname : '游客' }}</view>
 				<view class="font-size-sm text-color-white">一份物品，由仓管理开启您的家居物品管理</view>
 			</view>
 		</view>
@@ -29,7 +29,7 @@
 						<view class="iconfont iconarrow-right"></view>
 					</view>
 				</view>
-				<view class="qrcode-section d-flex flex-column align-items-center">
+				<view class="qrcode-section d-flex flex-column align-items-center" @click="memberCode">
 					<image class="img mb-10" src="/static/images/index/qrcode.png"></image>
 					<text class="font-size-sm text-color-primary">会员码</text>
 				</view>
@@ -75,13 +75,31 @@
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex';
 export default {
 	data() {
 		return {
 			memberStoryList: [{ imgSrc: 'https://img-shop.qmimg.cn/s23107/2020/04/27/0039bf41c9ebd50a2c.jpg', title: '"梅"你不行 | 霸气杨梅清爽回归' }]
 		};
 	},
-	methods: {}
+	computed: {
+		...mapGetters(['isLogin']),
+		...mapState(['member'])
+	},
+	onShow() {},
+	methods: {
+		memberCode() {
+			if (!this.isLogin) {
+				uni.navigateTo({
+					url: '/pages/login/login'
+				});
+				return;
+			}
+			uni.navigateTo({
+				url: '/pages/mine/member-code'
+			});
+		}
+	}
 };
 </script>
 
