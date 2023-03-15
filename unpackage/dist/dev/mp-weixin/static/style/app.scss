@@ -38,6 +38,14 @@ page {
 	margin-bottom: 30rpx;
 }
 
+.position-relative {
+	position: relative;
+}
+
+.position-fixed {
+	position: fixed;
+}
+
 .d-flex {
 	display: flex;
 }
@@ -124,6 +132,16 @@ button {
 		}
 		&::after {
 			border: 0;
+		}
+	}
+	&[type='default'] {
+		&[plain] {
+			color: $text-color-assist;
+			border: 1rpx solid $text-color-assist;
+		}
+		&.button-hover {
+			color: rgba($color: $text-color-assist, $alpha: 0.5);
+			border: 1rpx solid rgba($color: $text-color-assist, $alpha: 0.5);
 		}
 	}
 }

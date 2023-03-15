@@ -87,6 +87,12 @@ page {
 .mb-30 {
   margin-bottom: 30rpx;
 }
+.position-relative {
+  position: relative;
+}
+.position-fixed {
+  position: fixed;
+}
 .d-flex {
   display: flex;
 }
@@ -157,6 +163,14 @@ button[type='primary'].button-hover {
 }
 button[type='primary']::after {
   border: 0;
+}
+button[type='default'][plain] {
+  color: #919293;
+  border: 1rpx solid #919293;
+}
+button[type='default'].button-hover {
+  color: rgba(145, 146, 147, 0.5);
+  border: 1rpx solid rgba(145, 146, 147, 0.5);
 }
 @font-face {
   font-family: 'iconfont';
