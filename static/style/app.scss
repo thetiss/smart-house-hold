@@ -38,6 +38,18 @@ page {
 	margin-bottom: 30rpx;
 }
 
+.mb-40 {
+	margin-bottom: 40rpx;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.position-fixed {
+	position: fixed;
+}
+
 .d-flex {
 	display: flex;
 }
@@ -54,6 +66,14 @@ page {
 	justify-content: space-between;
 }
 
+.justify-content-evenly {
+	justify-content: space-evenly;
+}
+
+.justify-content-around {
+	justify-content: space-around;
+}
+
 .align-items-center {
 	align-items: center;
 }
@@ -62,8 +82,16 @@ page {
 	flex: 1 1 auto;
 }
 
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 .bg-white {
 	background-color: #fff;
+}
+
+.bg-warning {
+	background-color: $color-warning;
 }
 
 .font-size-sm {
@@ -101,7 +129,7 @@ page {
 	color: #fff;
 }
 
-.text-align {
+.text-align-center {
 	text-align: center;
 }
 
@@ -124,6 +152,16 @@ button {
 		}
 		&::after {
 			border: 0;
+		}
+	}
+	&[type='default'] {
+		&[plain] {
+			color: $text-color-assist;
+			border: 1rpx solid $text-color-assist;
+		}
+		&.button-hover {
+			color: rgba($color: $text-color-assist, $alpha: 0.5);
+			border: 1rpx solid rgba($color: $text-color-assist, $alpha: 0.5);
 		}
 	}
 }

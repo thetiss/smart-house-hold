@@ -37,17 +37,21 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/mine/member-code",
+			"style": {
+				"navigationBarTitleText": "会员码",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的乐园",
+				"enablePullDownRefresh": false
+			}
 		}
-	    ,{
-            "path" : "pages/mine/member-code",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#007AFF",
@@ -64,8 +68,8 @@
 				"pagePath": "pages/api/api",
 				"text": "%index.api%"
 			}, {
-				"pagePath": "pages/schema/schema",
-				"text": "%index.schema%"
+				"pagePath": "pages/mine/mine",
+				"text": "我的"
 			}
 		]
 	},
