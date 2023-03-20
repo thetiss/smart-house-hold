@@ -1,6 +1,7 @@
 import App from './App'
 import messages from './locale/index'
 import store from './store/index.js'
+import api from './api/index.js'
 
 let i18nConfig = {
 	locale: uni.getLocale(),
@@ -38,6 +39,7 @@ Vue.use(VueI18n)
 const i18n = new VueI18n(i18nConfig)
 Vue.config.productionTip = false
 App.mpType = 'app'
+Vue.prototype.$api = api
 Vue.prototype.$store = store
 Vue.prototype.$msgError = msgError
 Vue.prototype.$msgSuccess = msgSuccess
