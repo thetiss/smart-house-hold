@@ -6,7 +6,8 @@
     "pages/schema/schema",
     "pages/system/system",
     "pages/login/login",
-    "pages/mine/member-code"
+    "pages/mine/member-code",
+    "pages/mine/mine"
   ],
   "subPackages": [],
   "window": {
@@ -34,8 +35,8 @@
         "text": "API"
       },
       {
-        "pagePath": "pages/schema/schema",
-        "text": "Schema"
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
       }
     ]
   },

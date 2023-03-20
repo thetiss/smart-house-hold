@@ -18,7 +18,7 @@
         }
     },
     "compileType": "miniprogram",
-    "libVersion": "2.30.3",
+    "libVersion": "2.30.2",
     "appid": "wx729cbbe1953d5134",
     "projectname": "smart-house-hold-appleat",
     "condition": {

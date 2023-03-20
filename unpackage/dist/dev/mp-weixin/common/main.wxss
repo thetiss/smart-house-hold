@@ -87,6 +87,9 @@ page {
 .mb-30 {
   margin-bottom: 30rpx;
 }
+.mb-40 {
+  margin-bottom: 40rpx;
+}
 .position-relative {
   position: relative;
 }
@@ -105,6 +108,12 @@ page {
 .justify-content-between {
   justify-content: space-between;
 }
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
 .align-items-center {
   align-items: center;
 }
@@ -113,6 +122,9 @@ page {
 }
 .bg-white {
   background-color: #fff;
+}
+.bg-warning {
+  background-color: #fab714;
 }
 .font-size-sm {
   font-size: 24rpx;
