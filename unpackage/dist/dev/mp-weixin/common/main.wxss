@@ -120,6 +120,9 @@ page {
 .flex-fill {
   flex: 1 1 auto;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .bg-white {
   background-color: #fff;
 }
@@ -153,7 +156,7 @@ page {
 .text-color-white {
   color: #fff;
 }
-.text-align {
+.text-align-center {
   text-align: center;
 }
 .font-weight-bold {
